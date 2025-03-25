@@ -11,7 +11,8 @@
     "db:schools": "npm run db:schools:download && npm run db:schools:import",
     "db:schools:download": "download --extract --out tmp/ https://nedlasting.geonorge.no/geonorge/Befolkning/Grunnskoler/PostGIS/Befolkning_0000_Norge_25833_Grunnskoler_PostGIS.zip",
     "db:schools:import": "docker exec -i /postgis /usr/bin/psql --user postgres < tmp/Befolkning_0000_Norge_25833_Grunnskoler_PostGIS.sql",
-    "start": "cd server && npm start"
+    "start": "cd server && npm start",
+    "postinstall": "cd server && npm install --include=dev"
   },
   "repository": {
     "type": "git",
